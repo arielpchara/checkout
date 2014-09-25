@@ -3,22 +3,60 @@
 <head>
 	<meta charset="UTF-8">
 	<title></title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width">
 	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		var menu = $("aside.cart").click(function(){
+			menu.toggleClass('show');
+		});
+		$("aside.cart .icon a").click(function(){ menu.toggleClass('show'); return false; });
+	});
+	</script>
 </head>
 <body>
 	
 	<header>
 			<div class="logo"></div>
-			<div class="nav"></div>
-			<div class="cart"></div>
+			<div class="nav">
+				<ul>
+					<li><a href=""><i class="fa fa-user"></i></a></li>
+					<li><a href=""><i class="fa fa-truck"></i></a></li>
+					<li><a href=""><i class="fa fa-money"></i></a></li>
+					<li><a href=""><i class="fa fa-check-square-o"></i></a></li>
+				</ul>
+			</div>
 	</header>
 
+	<aside class="cart">
+			<div class="icon">
+				<a href="#cart">cart</a>
+			</div>
+			<ul>
+				<li>Item</li>
+				<li>Item</li>
+				<li>Item</li>
+				<li>Item</li>
+			</ul>
+
+	</aside>
+
 	<div class="container">
+		
+		<aside></aside>
+		<section>
+
+			<h1>lipsum10</h1>
+			<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum officia ut magnam quam repellendus sequi dolorem quas. Sed consectetur suscipit, labore sapiente possimus ipsum debitis a animi laboriosam excepturi odit voluptate dolorem ullam veniam, assumenda sequi, nobis dolores natus! Asperiores qui, illum, ab fuga perferendis nulla! Odit culpa itaque facere magni tenetur. Ipsum fugit animi, ipsa voluptatibus quisquam! Explicabo illum facere illo nam ratione veritatis dolor, vel. Enim aliquam vitae cupiditate modi suscipit non a recusandae, eveniet sunt aspernatur, commodi pariatur veniam! Mollitia quaerat vel reprehenderit maiores quod, delectus laboriosam nihil beatae sit veritatis assumenda modi cumque libero fuga doloribus rerum ducimus quos. Tempora numquam inventore sint, nesciunt quasi assumenda omnis quaerat commodi rem optio officiis facere maiores consequatur, enim, delectus odio earum beatae minima explicabo! Nobis eum, eaque, repudiandae cupiditate sequi minima id mollitia tempora explicabo ab voluptatem labore in totam eos officiis ex eius ad omnis nemo animi, at optio molestiae! Excepturi suscipit velit, ut, repudiandae harum tempore sunt vero ratione impedit alias cupiditate cum dicta pariatur, numquam voluptates corporis nulla culpa! Cupiditate quod, magnam incidunt harum quae, ullam eius, earum eum dolor vel, mollitia repudiandae distinctio eligendi exercitationem? Blanditiis eum modi atque harum molestiae similique perspiciatis saepe quis, maiores ex dolores necessitatibus facere, expedita officiis delectus quia alias quibusdam quas voluptas non vero, repudiandae mollitia. Tempora, aperiam beatae aspernatur perspiciatis architecto culpa, sunt ex error possimus pariatur placeat sapiente porro repellendus incidunt et sequi. Repellat quo maiores ad eligendi unde quasi vero illum recusandae dolores officiis error dolore quae amet obcaecati praesentium, cum voluptate quidem dignissimos, repellendus laudantium, magnam minima quia voluptas laborum. Nobis beatae molestiae soluta, error cupiditate sit voluptatum odio ut nulla temporibus repudiandae quia consequatur voluptates vitae, mollitia vel dignissimos ratione porro, dolores rem illo minus. Tenetur animi aliquid, incidunt ad assumenda laudantium recusandae odit voluptatum, blanditiis ipsa, unde distinctio praesentium? Nostrum animi ad laboriosam dolore atque praesentium blanditiis, iure sint vero beatae minus voluptates voluptas eveniet error tempore rem iusto voluptatem, obcaecati suscipit numquam ipsum laudantium? Laborum fugit quos, aperiam tempora non quibusdam, fugiat magni unde maxime dignissimos officiis asperiores tempore similique numquam commodi accusamus quasi dolorem, recusandae minus eius corporis earum sequi. Error aut quo ullam repellendus, suscipit corrupti tempore, totam, deserunt quibusdam incidunt dolores aliquid voluptas architecto veritatis ab ipsa eos similique recusandae, itaque voluptate enim. Dolores reprehenderit fugit nobis laboriosam quos quod, obcaecati voluptatem eligendi dicta, repudiandae impedit nostrum eveniet.</p>
+
+		</section>
+	
 	</div>
+
 
 </body>
 </html>

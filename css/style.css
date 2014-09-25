@@ -1,29 +1,166 @@
+/*.box {
+ *	@include transition(all, 0.2s, $timingFunction,0);
+ *}
+ */
+/*
+ * @include Opacity(0.5); @include Opacity(1);
+ */
+/*
+ * @include bx(0, 0, 0, 2,rgb(111, 178, 0))
+ */
+/*
+ * @include bxInset(0, 0, 0, 2,rgb(111, 178, 0) )
+ */
+/*
+ * @include  scale(1);
+ */
+/*
+ * @include  transform(translate(10px,10px))
+ */
+/*
+ * @include  origin(0% 0%)
+ */
+/*
+	@include keyframes(bgcolor) {
+	  0% {
+	    background-color: #ffccf2;
+	  }
+	  100% {
+	    background-color: #ccffff;
+	  } 
+	}
+ */
+/*
+ * @include animation (bgcolor, 300ms, 0, $timingFunction)
+ */
+/*
+ * @include animation (bgcolor, 300ms, 0, $timingFunction)
+ */
+/*
+ * @include animationRepeat (bgcolor, 300ms, 0, $timingFunction)
+ */
 a {
   text-decoration: none;
   outline: none; }
 
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width: 480px) {
-  body {
-    font-family: 'Roboto', sans-serif; }
-    body > header {
-      position: relative;
-      z-index: 10; }
-      body > header .logo {
-        display: block;
-        height: 50px;
-        background: #555; }
-      body > header .nav {
-        margin-right: 30%;
-        height: 75px;
-        background: #65F; }
-      body > header .cart {
-        height: 75px;
-        background: #F98;
-        width: 30%;
-        position: absolute;
-        top: 50px;
-        right: 0; } }
-.container section {
+p, h1 {
+  margin: 6px 14px 10px; }
+
+h1 {
+  font-size: 1.8em; }
+
+p {
+  text-align: justify;
+  line-height: 1.3em; }
+
+body {
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
   position: absolute;
-  width: 100%; }
+  font-family: 'Roboto', sans-serif; }
+
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0; }
+  header .logo {
+    display: block;
+    height: 64px;
+    background: #6fb200; }
+  header .nav {
+    margin-right: 64px;
+    height: 64px;
+    background: #6fb200;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 100; }
+    header .nav ul {
+      position: absolute;
+      height: 100%;
+      width: 100%; }
+      header .nav ul li {
+        float: left;
+        width: 25%;
+        height: 100%;
+        position: relative; }
+        header .nav ul li a {
+          text-align: center;
+          color: #FFF;
+          line-height: 100%;
+          position: absolute;
+          line-height: 64px;
+          width: 100%;
+          font-size: 2.5em; }
+
+aside.cart {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #CCC;
+  top: 0;
+  z-index: 9999;
+  -webkit-transition: all 0.3s linear 0ms;
+  -moz-transition: all 0.3s linear 0ms;
+  -ms-transition: all 0.3s linear 0ms;
+  -o-transition: all 0.3s linear 0ms;
+  transition: all 0.3s linear 0ms;
+  -webkit-transform: translate(100%, 0);
+  -moz-transform: translate(100%, 0);
+  -ms-transform: translate(100%, 0);
+  -o-transform: translate(100%, 0);
+  transform: translate(100%, 0); }
+aside.show {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0); }
+  aside.show .icon {
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0; }
+aside .icon {
+  -webkit-transition: all 0.3s linear 0ms;
+  -moz-transition: all 0.3s linear 0ms;
+  -ms-transition: all 0.3s linear 0ms;
+  -o-transition: all 0.3s linear 0ms;
+  transition: all 0.3s linear 0ms;
+  height: 64px;
+  max-width: 64px;
+  background: #6fb200;
+  width: 64px;
+  position: absolute;
+  top: 0;
+  left: -64px; }
+  aside .icon a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    text-indent: -9999px; }
+aside ul li {
+  display: block;
+  text-align: center;
+  color: #FFF; }
+
+.container {
+  border-top: 64px solid white;
+  border-bottom: 64px solid white;
+  overflow: hidden;
+  position: relative;
+  min-height: 300px;
+  overflow: auto; }
+  .container section {
+    height: 100%; }
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background: #555;
+  z-index: 1000; }

@@ -1,3 +1,5 @@
+@import 'mixins';
+
 @mixin full {
 	position: absolute;
 	width: 100%;
@@ -5,45 +7,131 @@
 
 $color:#6fb200;
 $colorInverted:#FFF;
-
+$cartWidth: 64px;
+$logoHeight: 64px;
+$timingFunction:200ms;
 a {
 	text-decoration: none;
 	outline: none;
 }
+p,h1 {
+	margin: 6px 14px 10px;
+}
+h1 { font-size: 1.8em; }
+p { text-align: justify; line-height: 1.3em; }
 
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 480px) {
-	body {
-		font-family: 'Roboto', sans-serif;
-		$cartWidth: 30%;
-		$logoHeight: 50px;
-		>header {
-			position: relative;
-			z-index: 10;
-			.logo {
-				display: block;
-				height: $logoHeight;
-				background: #555;
-			}
-			.nav {
-				margin-right: $cartWidth;
-				height: $logoHeight*1.5;
-				background: #65F;
-			}
-			.cart {
-				height: $logoHeight*1.5;
-				background: #F98;
-				width: $cartWidth;
-				position: absolute;
-				top: $logoHeight;
-				right: 0;
+body {
+	font-size: 14px;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	font-family: 'Roboto', sans-serif;
+}
+
+header {
+	width: 100%;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	.logo {
+		display: block;
+		height: $logoHeight;
+		background: $color;
+	}
+	.nav {
+		margin-right: $cartWidth;
+		height: $logoHeight;
+		background: $color;
+		width: 100%;
+		position: fixed;
+		bottom: 0;
+		z-index: 100;
+		ul {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			li {
+				float: left;
+				width: 25%;
+				height: 100%;
+				position: relative;
+				a {
+					text-align: center;
+					color: #FFF;
+					line-height: 100%;
+					position: absolute;
+					line-height: $logoHeight;
+					width: 100%;
+					font-size: 2.5em;
+				}
 			}
 		}
 	}
 }
 
-.container {
-	section {
-		@include full;
+aside {
+	&.cart {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background: #CCC;
+		top: 0;
+		z-index: 9999;
+		@include transition(all, 0.3s, linear,0ms);
+		@include transform(translate(100%,0));
 	}
+	&.show {
+		@include transform(translate(0,0));
+		.icon {
+			position: fixed;
+			right: 0;
+			top: 0;
+			left: 0;
+		}
+	}
+	.icon {
+		@include transition(all, 0.3s, linear,0ms);
+		height: $logoHeight;
+		max-width: 64px;
+		background: $color;
+		width: $cartWidth;
+		position: absolute;
+		top:0;
+		left: -$cartWidth;
+		a {
+			position: absolute;
+			top:0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			text-indent: -9999px; 
+		}
+	}
+	ul {
+		li {
+			display: block;
+			text-align: center;
+			color: #FFF;
+		}
+	}
+}
+$minHeight:300px;
+$widthAside:25%;
+.container {
+	border-top: $logoHeight solid #FFF;
+	border-bottom: $logoHeight solid #FFF;
+    overflow:hidden;
+	position:relative;
+	min-height: $minHeight;
+	overflow: auto;
+	section {
+		height: 100%;
+	}
+}
+footer {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	background: #555;
+	z-index: 1000;
 }
