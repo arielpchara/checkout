@@ -1,0 +1,29 @@
+a {
+  text-decoration: none;
+  outline: none; }
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 480px) {
+  body {
+    font-family: 'Roboto', sans-serif; }
+    body > header {
+      position: relative;
+      z-index: 10; }
+      body > header .logo {
+        display: block;
+        height: 50px;
+        background: #555; }
+      body > header .nav {
+        margin-right: 30%;
+        height: 75px;
+        background: #65F; }
+      body > header .cart {
+        height: 75px;
+        background: #F98;
+        width: 30%;
+        position: absolute;
+        top: 50px;
+        right: 0; } }
+.container section {
+  position: absolute;
+  width: 100%; }

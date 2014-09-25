@@ -1,0 +1,49 @@
+@mixin full {
+	position: absolute;
+	width: 100%;
+}
+
+$color:#6fb200;
+$colorInverted:#FFF;
+
+a {
+	text-decoration: none;
+	outline: none;
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 480px) {
+	body {
+		font-family: 'Roboto', sans-serif;
+		$cartWidth: 30%;
+		$logoHeight: 50px;
+		>header {
+			position: relative;
+			z-index: 10;
+			.logo {
+				display: block;
+				height: $logoHeight;
+				background: #555;
+			}
+			.nav {
+				margin-right: $cartWidth;
+				height: $logoHeight*1.5;
+				background: #65F;
+			}
+			.cart {
+				height: $logoHeight*1.5;
+				background: #F98;
+				width: $cartWidth;
+				position: absolute;
+				top: $logoHeight;
+				right: 0;
+			}
+		}
+	}
+}
+
+.container {
+	section {
+		@include full;
+	}
+}
