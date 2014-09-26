@@ -21,7 +21,7 @@
 						'transform':  		 transform};
 				e.css(css);
 			var change = function(params){
-				selected.parent().scrollTo(e,600,{easing:'easeInOutCirc'});
+				selected.parent().scrollTo(e,300);
 			};
 			$.subscribe('/section/change/'+name,change);
 		});
