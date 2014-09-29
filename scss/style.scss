@@ -9,9 +9,9 @@ $color:#6fb200;
 $colorInverted:#FFF;
 $cartWidth: 80px;
 $logoHeight: 50px;
-$timingFunction:150ms;
-$marginSide:14px;
-$marginDown:10px;
+$timingFunction:200ms;
+$marginSide:6px;
+$marginDown:14px;
 
 a {
 	text-decoration: none;
@@ -43,8 +43,23 @@ header {
 		display: block;
 		height: $logoHeight;
 		background: $color;
+		overflow: hidden;
+		.title {
+			color: #FFF;
+			margin-top: 10px;
+			@include transition(all, $timingFunction, linear, 0ms);
+			&.show {
+				@include transform(translate(0,0));
+				@include Opacity(100);
+			}
+			&.hide {
+				@include transform(translate(10%,0));
+				@include Opacity(0);
+			}
+		}
 	}
 	.nav {
+		@include transition(all, $timingFunction, linear, 0ms);
 		margin-right: $cartWidth;
 		height: $logoHeight;
 		background: #333;
@@ -52,6 +67,10 @@ header {
 		position: fixed;
 		bottom: 0;
 		z-index: 100;
+		&.keyboard {
+			@include transform(translate(0,100%));
+			@include Opacity(100);
+		}
 		.notification {
 			@include full;
 			background: #FFD688;
@@ -194,9 +213,10 @@ aside {
 			margin-top: $logoHeight;
 			li {
 				display: block;
-				color: #000;
 				.item {
-					padding: 8px;
+					margin: 1px;
+					padding: 10px;
+					background: #EEE;
 					.img {
 						display: block;
 						float: left;
@@ -213,6 +233,8 @@ aside {
 		}
 	}
 }
+
+
 $minHeight:300px;
 $widthAside:25%;
 .container {
@@ -234,6 +256,12 @@ $widthAside:25%;
 			.scroll {
 			}
 		}
+		&.visible {
+			.wrap {
+				.scroll {
+				}
+			}
+		}
 	}
 }
 footer {
@@ -245,20 +273,81 @@ footer {
 }
 
 .field {
-	margin: 6px $marginSide $marginDown;
+	position: relative;
+	margin: 10px 5px $marginDown;
 	label {
 		display:  block;
 		margin-bottom: $marginDown;
 	}
-	input[type=text] {
+	input[type=text],input[type=number] {
 		border: none;
 		display: block;
 		border: none;
-		width: 97%;
-		padding: 1%;
+		width: 94%;
+		padding: 6px 3%;
 		outline: none;
 		margin: 0 auto;
 		position: relative;
-		border-bottom: 1px solid #666;
+		font-size: 1.2em;
+	}
+	.underline {
+		background: #555;
+		height: 5px;
+		position: absolute;
+		bottom: -1px;
+		width: 100%;
+		left: -1px;
+		padding: 1px;
+	}
+	&.cep {
+		input {
+			font-size: 2em;
+		}
+	}
+}
+
+.payment {
+	.ways {
+		.way {
+			background: #EEE;
+			margin-top:  1px;
+			padding:  10px 0;
+			position: relative;
+			a {
+				position: absolute;
+				right: 10px;
+				top: 50%;
+				margin-top: -30px;
+				background: $color;
+				color: #FFF;
+				line-height: 60px;
+				width: 60px;
+				border-radius: 100%;
+				text-align: center;
+				font-size: 1.5em;
+			}
+		}
+	}
+}
+
+$columnWidth: 12.5%;
+@mixin width($w){
+	&.w#{$w} {
+		width: $w*$columnWidth;
+	}
+}
+.columns {
+	overflow: hidden;
+	margin: 0 $marginSide;
+	.column {
+		float: left;
+		@include width(1);
+		@include width(2);
+		@include width(3);
+		@include width(4);
+		@include width(5);
+		@include width(6);
+		@include width(7);
+		@include width(8);
 	}
 }

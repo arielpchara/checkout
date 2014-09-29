@@ -20,13 +20,15 @@
 <body>
 	
 	<header>
-		<div class="logo"></div>
+		<div class="logo">
+			<h1 class="title"></h1>
+		</div>
 		<div class="nav">
-			<div class="notification show">
+			<div class="notification">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos eligendi magnam illo, qui fugit vitae molestias expedita sit eveniet eaque!
 				</p>
 			</div>
-			<ul>
+			<ul class="steps">
 				<li><a href="#id" class="icon identity active"><i> </i></a></li>
 				<li><a href="#loc" class="icon location"><i> </i></a></li>
 				<li><a href="#pay" class="icon payment"><i> </i></a></li>
@@ -106,44 +108,102 @@
 	</aside>
 
 	<div class="container">
-		<section name="id">
+		<section name="id" title="Identificação">
 			<div class="wrap">
 				<div class="scroll">
-					<h1>Identificação</h1>
-						<div class="field">
-							<label for="">Nome completo</label>
-							<div class="underline"></div>
-							<input type="text">
-						</div>
-						<div class="field">
-							<label for="">Nome completo</label>
-							<div class="underline"></div>
-							<input type="text">
-						</div>
+					<div class="field">
+						<label for="">Nome completo</label>
+						<div class="underline"></div>
+						<input type="text">
+					</div>
+					<div class="field">
+						<label for="">Nome completo</label>
+						<div class="underline"></div>
+						<input type="text">
+					</div>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo deserunt nobis aperiam, maiores ducimus beatae eius numquam, dolorum, alias nihil fuga rem perspiciatis sit, error ullam soluta. Eligendi veniam accusantium nihil, blanditiis corporis, natus veritatis eveniet magnam fugiat quo ipsam harum quas incidunt! Architecto nihil, ea dolorum beatae qui dolor!</p>
 				</div>
 			</div>
 		</section>
-		<section name="loc">
+		<section name="loc" title="Localização">
 			<div class="wrap">
 				<div class="scroll">
-					<h1>Localização</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, aliquid! Inventore delectus, officia, explicabo placeat quia quae quis totam ipsa possimus earum maiores consectetur adipisci. Debitis hic minus, cum repudiandae autem expedita esse ad velit ab. Quaerat, similique! Sunt, neque dolorem dolores cupiditate, eum fuga pariatur? Quod maxime sit, voluptas!</p>
+					<div class="columns">
+						<div class="column w8">
+							<div class="field cep">
+								<label for="">CEP</label>
+								<div class="underline"></div>
+								<input type="number" placeholder="00000-000"  maxlength="9">
+							</div>
+						</div>
+						<div class=" column w5">
+							<div class="field">
+								<div class="underline"></div>
+								<input type="text" placeholder="Rua">
+							</div>
+						</div>
+						<div class="column w3">
+							<div class="field">
+								<div class="underline"></div>
+								<input type="number" placeholder="Numero">
+							</div>
+						</div>
+
+						<div class="column w8">
+							<div class="field">
+								<div class="underline"></div>
+								<input type="text" placeholder="Complemento">
+							</div>
+						</div>
+
+						<div class="column w6">
+							<div class="field">
+								<div class="underline"></div>
+								<input type="text" placeholder="Cidade">
+							</div>
+						</div>
+						<div class="column w2">
+							<div class="field">
+								<div class="underline"></div>
+								<input type="text" placeholder="UF">
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
-		<section name="pay">
+		<section name="pay" class="payment"  title="Pagamento">
 			<div class="wrap">
 				<div class="scroll">
-					<h1>Pagamento</h1>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quae rem magnam eaque eum. Atque, voluptates quos quod ratione tempora necessitatibus suscipit corrupti. Deserunt a fugit ex sed minima laboriosam! Dolorum tempora reprehenderit nesciunt quisquam ipsa dolor incidunt expedita vel quaerat voluptas, adipisci veniam, sit id soluta repellat aliquid. Nihil.</p>
+					<div class="ways">
+						<div class="way">
+							<h3>Payment Way</h3>
+							<p>Description</p>
+							<a href="#"><i class="fa fa-credit-card"></i></a>
+						</div>
+						<div class="way">
+							<h3>Payment Way</h3>
+							<p>Description</p>
+							<a href="#"><i class="fa fa-barcode"></i></a>
+						</div>
+						<div class="way">
+							<h3>Payment Way</h3>
+							<p>Description</p>
+							<a href="#"><i class="fa fa-bank"></i></a>
+						</div>
+						<div class="way">
+							<h3>Payment Way</h3>
+							<p>Description</p>
+							<a href="#"<i class="fa fa-money"></i></a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
-		<section name="ok">
+		<section name="ok" title="Confirmação">
 			<div class="wrap">
 				<div class="scroll">
-					<h1>Confirmação</h1>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus earum facere unde voluptates quisquam amet explicabo, accusamus nam hic assumenda, consequuntur incidunt quos. Placeat quos esse nostrum, repudiandae soluta quis accusamus ipsum incidunt dolorum magnam perspiciatis, illum debitis culpa quod aliquam doloremque ex consequuntur blanditiis, fugiat harum numquam! Id, excepturi.</p>
 				</div>
 			</div>
